@@ -10,13 +10,27 @@ export class InfoPaginaService {
     info: InfoPagina = {};
     cargada = false;
 
-  constructor(private http:HttpClient) {
-      console.log("servicio cargado");
-      this.http.get("assets/data/data-pagina.json").subscribe((res: InfoPagina) =>{
-          this.cargada = true;
-          this.info = res;
-          console.log(res);
-        });
+    familia:any[];
 
+  constructor(private http:HttpClient) {
+
+    this.cargarInfo();
+    this.cargarFamilia();
+  }
+
+
+  private cargarInfo(){
+    console.log("servicio cargado");
+    this.http.get("assets/data/data-pagina.json").subscribe((res: InfoPagina) =>{
+        this.cargada = true;
+        this.info = res;
+      });
+  }
+
+  private cargarFamilia(){
+    this.http.get("https://familyportfolio-faec8.firebaseio.com/familia.json").subscribe((res:any) =>{
+      this.familia = res;
+      console.log(res);
+    });
   }
 }

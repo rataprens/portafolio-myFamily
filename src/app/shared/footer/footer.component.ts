@@ -8,7 +8,7 @@ import {InfoPaginaService} from "../../services/info-pagina.service";
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private _infoPag:InfoPaginaService) {
+  constructor(public _infoPag:InfoPaginaService) {
       
    }
 

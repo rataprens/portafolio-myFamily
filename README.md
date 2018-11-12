@@ -1,6 +1,6 @@
 ## Portafolio Basico Enfocado En Mi Pequeña Familia
 
-Este proyecto fue generado con angular [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+Ejemplo de portafolio creado con Angular 6 + Bootstrap 4 + Firebase
 
 ## Screenshots
 
